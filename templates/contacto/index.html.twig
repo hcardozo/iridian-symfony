@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactoController!{% endblock %}
+
+{% block body %}
+<style>
+    .form-container {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px sans-serif;
+    }
+
+    .form-container > h1, h2{
+        text-align: center;
+    }
+    
+    div#contacto>div {
+        display: flex;
+        margin: 10px;
+    }
+
+    div#contacto>div>label {
+        width: 30%;
+        text-align: center;
+    }
+
+    div#contacto>div>input {
+        width: 50%;
+    }
+
+    div#contacto>div>select {
+        width: 51%;
+    }
+    div#contacto>div>button {
+        margin: auto;
+        width: 20%;
+    }
+</style>
+
+<div class="form-container">
+    <h1>Formulario de Contacto</h1>
+    {{form(formulario)}}
+
+    <h2>{{mensajeRespuesta}}</h1>
+</div>
+{% endblock %}
